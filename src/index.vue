@@ -3,15 +3,23 @@
     <image :src="logo" class="logo" />
     <text class="greeting">The environment is ready!</text>
     <HelloWorld/>
+    <Display/>
+    <Count/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import Count from './components/count.vue';
+import Display from './components/display.vue';
+import store from './store/store';
 export default {
   name: 'App',
+  store,
   components: {
-    HelloWorld
+    HelloWorld,
+    Count,
+    Display
   },
   data () {
     return {
